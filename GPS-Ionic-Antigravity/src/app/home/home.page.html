@@ -1,0 +1,116 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-title class="titulo">
+      💕 GPS Ionic - Antigravity
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="pink-content">
+
+  <div class="contenedor">
+
+    <div class="hero">
+      <h1>📍 Rastreador GPS</h1>
+      <p>Geolocalización en tiempo real</p>
+    </div>
+
+    <ion-button
+      expand="block"
+      class="btn-principal"
+      (click)="getCurrentLocation()">
+
+      <ion-icon slot="start" name="location-outline"></ion-icon>
+      Obtener Ubicación
+
+    </ion-button>
+
+    <div *ngIf="isLoading" class="cargando">
+
+      <ion-spinner></ion-spinner>
+
+      <p>Buscando ubicación...</p>
+
+    </div>
+
+    <ion-card *ngIf="error" class="error-card">
+
+      <ion-card-header>
+
+        <ion-card-title>
+          {{ error.message }}
+        </ion-card-title>
+
+        <ion-card-subtitle>
+          {{ error.code }}
+        </ion-card-subtitle>
+
+      </ion-card-header>
+
+      <ion-card-content>
+        {{ error.details }}
+      </ion-card-content>
+
+    </ion-card>
+
+    <div *ngIf="location">
+
+      <ion-card class="glass-card">
+
+        <ion-card-content>
+
+          <h2>Latitud</h2>
+          <p>{{ location.latitude }}</p>
+
+          <h2>Longitud</h2>
+          <p>{{ location.longitude }}</p>
+
+        </ion-card-content>
+
+      </ion-card>
+
+      <ion-card class="glass-card">
+
+        <ion-card-content>
+
+          <h2>Precisión</h2>
+          <p>{{ location.accuracy }} metros</p>
+
+          <h2>Fecha</h2>
+          <p>{{ location.dateString }}</p>
+
+        </ion-card-content>
+
+      </ion-card>
+
+      <ion-button
+        expand="block"
+        class="btn-copiar"
+        (click)="copyCoordinates()">
+
+        <ion-icon
+          slot="start"
+          [name]="copied ? 'checkmark-outline' : 'copy-outline'">
+        </ion-icon>
+
+        {{ copied ? 'Copiado' : 'Copiar Coordenadas' }}
+
+      </ion-button>
+
+      <ion-button
+        expand="block"
+        fill="outline"
+        color="primary"
+        (click)="openGoogleMaps()">
+
+        <ion-icon slot="start" name="open-outline"></ion-icon>
+
+        Abrir Google Maps
+
+      </ion-button>
+
+    </div>
+
+  </div>
+
+</ion-content>

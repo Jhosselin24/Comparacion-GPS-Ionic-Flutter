@@ -1,0 +1,106 @@
+ion-content {
+  --background: #fff5fa;
+}
+
+.titulo {
+  text-align: center;
+  color: #e91e63;
+  font-weight: bold;
+}
+
+.contenedor {
+  padding: 20px;
+}
+
+.card-bienvenida {
+  background: white;
+  border-radius: 25px;
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 4px 15px rgba(233, 30, 99, 0.15);
+  margin-bottom: 25px;
+}
+
+.icono {
+  font-size: 60px;
+}
+
+.card-bienvenida h1 {
+  color: #e91e63;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card-bienvenida p {
+  color: #555;
+  margin: 0;
+}
+
+.btn-gps {
+  --background: linear-gradient(
+    135deg,
+    #ff80ab,
+    #e91e63
+  );
+
+  --border-radius: 18px;
+
+  height: 60px;
+
+  font-size: 18px;
+
+  margin-bottom: 30px;
+}
+
+.titulo-seccion {
+  color: #e91e63;
+  margin-bottom: 15px;
+}
+
+.coordenadas {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.card-coordenada {
+  flex: 1;
+  min-width: 150px;
+  background: white;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(233, 30, 99, 0.15);
+}
+
+.card-coordenada h3 {
+  color: #e91e63;
+}
+
+.valor {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.estado {
+  margin-top: 25px;
+  background: #e8f5e9;
+  color: #2e7d32;
+  border-radius: 15px;
+  padding: 15px;
+  font-weight: bold;
+}
+
+.info {
+  margin-top: 25px;
+  background: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(233, 30, 99, 0.1);
+}
+
+.info h3 {
+  color: #e91e63;
+}

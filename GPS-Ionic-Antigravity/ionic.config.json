@@ -1,0 +1,7 @@
+{
+  "name": "GPS-Ionic-Codex",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}

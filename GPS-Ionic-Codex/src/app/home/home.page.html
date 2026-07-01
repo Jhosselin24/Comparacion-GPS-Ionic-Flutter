@@ -1,0 +1,75 @@
+<ion-header>
+  <ion-toolbar color="light">
+    <ion-title class="titulo">
+      💖 GPS Ionic - Codex
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <div class="contenedor">
+
+    <!-- Tarjeta bienvenida -->
+    <div class="card-bienvenida">
+      <div class="icono">
+        📍
+      </div>
+
+      <div>
+        <h1>Bienvenido</h1>
+        <p>Obtén tu ubicación GPS actual con un solo clic.</p>
+      </div>
+    </div>
+
+    <!-- Botón -->
+    <ion-button
+      expand="block"
+      class="btn-gps"
+      (click)="obtenerUbicacion()">
+
+      🎯 Obtener ubicación
+
+    </ion-button>
+
+    <!-- Coordenadas -->
+    <h2 class="titulo-seccion">
+      📌 Coordenadas actuales
+    </h2>
+
+    <div class="coordenadas">
+
+      <div class="card-coordenada">
+        <h3>Latitud</h3>
+        <p class="valor">{{ latitud }}</p>
+      </div>
+
+      <div class="card-coordenada">
+        <h3>Longitud</h3>
+        <p class="valor">{{ longitud }}</p>
+      </div>
+
+    </div>
+
+    <!-- Estado -->
+    <div
+      class="estado"
+      *ngIf="mensaje">
+
+      {{ mensaje }}
+
+    </div>
+
+    <!-- Información -->
+    <div class="info">
+      <h3>ℹ Información</h3>
+
+      <p>
+        Asegúrate de tener activado el GPS y los permisos
+        de ubicación para obtener resultados precisos.
+      </p>
+    </div>
+
+  </div>
+
+</ion-content>
